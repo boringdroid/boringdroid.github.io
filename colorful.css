@@ -6567,5 +6567,8 @@ html, body {
   display: block;
   word-wrap: break-word; }
   
-  
-  
+@media (max-width: 767.98px) {
+  img.img-fluid.d-block.mx-auto.mnav {
+    width: 10%;
+  }
+}
