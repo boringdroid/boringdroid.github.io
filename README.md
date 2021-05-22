@@ -1,2 +1,2 @@
 # boringdroid.github.io
-[WIP]The boringdorid project's site.
+The boringdorid project's site.
