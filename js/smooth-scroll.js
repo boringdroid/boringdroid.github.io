@@ -16,7 +16,7 @@
         if (
           location.pathname.replace(/^\//, '') ==
           this.pathname.replace(/^\//, '') &&
-        location.hostname == hostname
+        location.hostname == this.hostname
         ) {
         // Figure out element to scroll to
           let target = $(this.hash);
