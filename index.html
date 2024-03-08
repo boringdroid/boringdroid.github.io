@@ -1,230 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KQTVKB66RP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KQTVKB66RP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      gtag("config", "G-KQTVKB66RP");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- PAGE settings -->
+    <link rel="icon" href="assets/images/bd_logo_blue.svg" />
+    <title>boringdroid</title>
+    <meta
+      name="description"
+      content="A minimal multi-window patchset for AOSP"
+    />
+    <meta
+      name="keywords"
+      content="aosp, boringfdroid, bliss, family, project"
+    />
+    <!-- CSS dependencies -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="colorful.css" />
+    <!-- Script: Navbar on-top -->
+    <script src="js/navbar-ontop.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-    gtag('config', 'G-KQTVKB66RP');
-  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- PAGE settings -->
-  <link rel="icon" href="assets/images/bd_logo_blue.svg">
-  <title>boringdroid</title>
-  <meta name="description" content="A minimal multi-window patchset for AOSP">
-  <meta name="keywords" content="aosp, boringfdroid, bliss, family, project">
-  <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="colorful.css">
-  <!-- Script: Navbar on-top -->
-  <script src="js/navbar-ontop.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <div class="container"> <a class="navbar-brand" href="#">
-        <img class="img-fluid d-inline mx-auto align-middle mnav" src="assets/images/bd_logo_blue.svg" width="42px" style="padding-bottom: 0.4rem; ">
-        <b> boringdroid</b>
-      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar10">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link" href="#what">What</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#how">How</a> </li>
-          <!-- <li class="nav-item"> <a class="nav-link" href="#">About</a> </li> -->
-          <!-- <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li> -->
-        </ul> <a class="btn navbar-btn ml-md-2 btn-light text-dark" href="https://github.com/boringdroid/boringdroid" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </nav>
-  <div class="py-5 text-center cover d-flex flex-column bg-dark">
-    <div class="container my-auto">
-      <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="assets/images/boringdroid_blue.svg" width="65%"></div>
-      </div>
-      <div class="row">
-        <div class="mx-auto col-lg-6 col-md-8">
-          <h3 class="mb-4"><b>A minimal multi-window patchset for AOSP</b></h3>
-          <p>Based on AOSP (9.0 - 11.0), and it provides a minimum patchset to use multi-window in AOSP by default. The problems the patchset resolves are slowly disappearing on master branch, so the project is boring, that the reason we call it Boringdroid.</p>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="img-fluid d-inline mx-auto align-middle mnav"
+            src="assets/images/bd_logo_blue.svg"
+            width="42px"
+            style="padding-bottom: 0.4rem"
+          />
+          <b> boringdroid</b>
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right border-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar10"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar10">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#what">What</a></li>
+            <li class="nav-item"><a class="nav-link" href="#how">How</a></li>
+            <!-- <li class="nav-item"> <a class="nav-link" href="#">About</a> </li> -->
+            <!-- <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li> -->
+          </ul>
+          <a
+            class="btn navbar-btn ml-md-2 btn-light text-dark"
+            href="https://github.com/boringdroid/boringdroid"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
-    </div>
-    <div class="container mt-auto">
-      <div class="row">
-        <div class="mx-auto col-lg-6 col-md-8 col-10">
-          <a href="#mission"><i class="d-block fa fa-angle-down fa-2x"></i></a>
+    </nav>
+    <div class="py-5 text-center cover d-flex flex-column bg-dark">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              class="img-fluid d-block mx-auto"
+              src="assets/images/boringdroid_blue.svg"
+              width="65%"
+            />
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-5 filter-dark cover bg-fixed" style="	background-image: url(assets/images/screenshot-multi-window.png);	background-position: center bottom;	background-size: cover;	background-repeat: repeat;" id="what">
-    <div class="container my-auto">
-      <div class="row">
-        <div class="col-md-8 p-3 text-white">
-          <h2 class="mb-4">What we add</h2>
-          <p class="lead">The boringdroid adds a minimize button for each window, and provides a smooth resizing experience. boringdroid also provides an enhanced taskbar to show running task list and installed app list. The next steps for Boringdroid will be to provide system tray functionalities in the taskbar.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center py-5" id="how">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="text-muted">Easy to get started</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="text-left col-md-12">
-          <div class="row my-3">
-            <div class="text-center col-lg-2 col-3"> <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x text-danger"></i>
-                <i class="fa fa-stack-1x text-white fa-dot-circle-o"></i>
-              </span> </div>
-            <div class="col-lg-10 col-9">
-              <h4 contenteditable="true">Download</h4>
-              <p class="code-block">mkdir -p boringdroid/11&nbsp;<br>cd boringdroid/11&nbsp;<br>repo init -u https://github.com/boringdroid/manifest.git -b boringdroid-11.0.0&nbsp;<br>repo sync -c -d --no-tags</p>
-            </div>
+        <div class="row">
+          <div class="mx-auto col-lg-6 col-md-8">
+            <h3 class="mb-4">
+              <b>A minimal multi-window patchset for AOSP</b>
+            </h3>
+            <p>
+              Based on AOSP (9.0 - 11.0), and it provides a minimum patchset to
+              use multi-window in AOSP by default. The problems the patchset
+              resolves are slowly disappearing on master branch, so the project
+              is boring, that the reason we call it Boringdroid.
+            </p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="text-right col-md-12">
-          <div class="row my-3">
-            <div class="order-lg-2 text-center col-lg-2 col-3"> <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                <i class="fa fa-stack-1x fa-code text-white"></i>
-              </span> </div>
-            <div class="text-lg-right text-right order-lg-1 col-lg-10 col-9">
-              <h4>Setup Environment</h4>
-              <p class="text-right"><b>Prerequisites</b>:<br>Android Studio or Android SDK with emulator setup<br>OpenJDK 11<br>All other AOSP dependencies installed</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="text-left col-md-12">
-          <div class="row my-3">
-            <div class="text-center col-lg-2 col-3"> <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x text-success"></i>
-                <i class="fa fa-stack-1x text-white fa-cogs"></i>
-              </span> </div>
-            <div class="col-lg-10 col-9">
-              <h4>Build</h4>
-              <p class="code-block">source build/envsetup.sh&nbsp;<br>lunch boringdroid_x86_64-userdebug&nbsp;<br>m</p>
-            </div>
+      <div class="container mt-auto">
+        <div class="row">
+          <div class="mx-auto col-lg-6 col-md-8 col-10">
+            <a href="#mission"
+              ><i class="d-block fa fa-angle-down fa-2x"></i
+            ></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- START OF BLISSLABS -->
-  <div class="py-5 text-light cover" style="background-color: #343a40;">
-    <div class="container" style="max-width: 100%;">
-	  <div class="row">
-        <div class="mx-auto col-md-8">
-          <h1 class="mb-3">A BlissLabs Project</h1>
-          <p class="lead">We are part of a larger community of open-source projects called BlissLabs. Explore more about the other BlissLabs projects below:<br></p>
+    <div
+      class="py-5 filter-dark cover bg-fixed"
+      style="
+        background-image: url(assets/images/screenshot-multi-window.png);
+        background-position: center bottom;
+        background-size: cover;
+        background-repeat: repeat;
+      "
+      id="what"
+    >
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-8 p-3 text-white">
+            <h2 class="mb-4">What we add</h2>
+            <p class="lead">
+              The boringdroid adds a minimize button for each window, and
+              provides a smooth resizing experience. boringdroid also provides
+              an enhanced taskbar to show running task list and installed app
+              list. The next steps for Boringdroid will be to provide system
+              tray functionalities in the taskbar.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="carousel slide" data-ride="carousel" id="carousel">
-            <div class="carousel-inner">
-              <div id="carousel-slider"> </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-              <span class="sr-only">Next</span>
-            </a>
+    </div>
+    <div class="text-center py-5" id="how">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-muted">Easy to get started</h2>
           </div>
-          <!---------------->
-          <script>
-            $.ajax({
-              type: "GET",
-              url: "https://api.blissroms.org/api/allprojects",
-              contentType: "application/json",
-              datatype: "json",
-              data: {},
-              success: function(data) {
-                var newContent = ''; // Variable to hold HTML
-                for (var i = 0; i < data.length; i++) { // Loop through object
-                  if (data[i].project != null) {
-                    if (i == 0) {
-                      newContent += '<div class="carousel-item active">';
+        </div>
+        <div class="row">
+          <div class="text-left col-md-12">
+            <div class="row my-3">
+              <div class="text-center col-lg-2 col-3">
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                  <i class="fa fa-stack-1x text-white fa-dot-circle-o"></i>
+                </span>
+              </div>
+              <div class="col-lg-10 col-9">
+                <h4 contenteditable="true">Download</h4>
+                <p class="code-block">
+                  mkdir -p boringdroid/11&nbsp;<br />cd boringdroid/11&nbsp;<br />repo
+                  init -u https://github.com/boringdroid/manifest.git -b
+                  boringdroid-11.0.0&nbsp;<br />repo sync -c -d --no-tags
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-right col-md-12">
+            <div class="row my-3">
+              <div class="order-lg-2 text-center col-lg-2 col-3">
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-stack-1x fa-code text-white"></i>
+                </span>
+              </div>
+              <div class="text-lg-right text-right order-lg-1 col-lg-10 col-9">
+                <h4>Setup Environment</h4>
+                <p class="text-right">
+                  <b>Prerequisites</b>:<br />Android Studio or Android SDK with
+                  emulator setup<br />OpenJDK 11<br />All other AOSP
+                  dependencies installed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-left col-md-12">
+            <div class="row my-3">
+              <div class="text-center col-lg-2 col-3">
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x text-success"></i>
+                  <i class="fa fa-stack-1x text-white fa-cogs"></i>
+                </span>
+              </div>
+              <div class="col-lg-10 col-9">
+                <h4>Build</h4>
+                <p class="code-block">
+                  source build/envsetup.sh&nbsp;<br />lunch
+                  boringdroid_x86_64-userdebug&nbsp;<br />m
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- START OF BLISSLABS -->
+    <div class="py-5 text-light cover" style="background-color: #343a40">
+      <div class="container" style="max-width: 100%">
+        <div class="row">
+          <div class="mx-auto col-md-8">
+            <h1 class="mb-3">A BlissLabs Project</h1>
+            <p class="lead">
+              We are part of a larger community of open-source projects called
+              BlissLabs. Explore more about the other BlissLabs projects
+              below:<br />
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="carousel slide" data-ride="carousel" id="carousel">
+              <div class="carousel-inner">
+                <div id="carousel-slider"></div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carousel"
+                role="button"
+                data-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <!---------------->
+            <script>
+              $.ajax({
+                type: "GET",
+                url: "https://api.blissroms.org/api/allprojects",
+                contentType: "application/json",
+                datatype: "json",
+                data: {},
+                success: function (data) {
+                  var newContent = ""; // Variable to hold HTML
+                  for (var i = 0; i < data.length; i++) {
+                    // Loop through object
+                    if (data[i].project != null) {
+                      if (i == 0) {
+                        newContent += '<div class="carousel-item active">';
+                      } else {
+                        newContent += '<div class="carousel-item">';
+                      }
+                      newContent +=
+                        '<img class="d-block img-fluid" src="' +
+                        data[i].project_avatar +
+                        '" style="max-width: auto; height: 350px;"';
+                      newContent +=
+                        'alt="' +
+                        data[i].project +
+                        ' " style="padding-top: 1.5rem;"/>';
+                      newContent +=
+                        '<div class="carousel-caption" style="background: linear-gradient(#343a40 10%, #343a40 100%)!important; padding-top: 120px; margin-left: 350px; ">';
+                      <!-- newContent += '<div class="item-details">'; -->
+                      newContent +=
+                        '<h3 class="zxc" ><b style="font-size: xx-large;">' +
+                        data[i].project +
+                        "</b></h3>";
+                      newContent +=
+                        '<h5 class="zxc" >Project Lead: ' +
+                        data[i].project_lead +
+                        "</h5>";
+                      newContent +=
+                        '<p class="card__text zxc" style=" margin-right: 1.7rem; margin-left: 1.7rem; ">' +
+                        data[i].project_description +
+                        "</p>";
+                      if (data[i].project_github != null) {
+                        newContent +=
+                          '<a href="' +
+                          data[i].project_github +
+                          '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
+                      }
+                      if (data[i].project_website != null) {
+                        newContent +=
+                          '<a href="' +
+                          data[i].project_website +
+                          '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+                      }
+                      <!-- newContent += '</div>'; -->
+                      newContent += "</div>";
+                      newContent += "</div>";
                     } else {
-                      newContent += '<div class="carousel-item">';
+                      newContent = "NONE";
                     }
-                    newContent += '<img class="d-block img-fluid" src="' + data[i].project_avatar + '" style="max-width: auto; height: 350px;"';
-                    newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
-                    newContent += '<div class="carousel-caption" style="background: linear-gradient(#343a40 10%, #343a40 100%)!important; padding-top: 120px; margin-left: 350px; ">';
-                    <!-- newContent += '<div class="item-details">'; -->
-                    newContent += '<h3 class="zxc" ><b style="font-size: xx-large;">' + data[i].project + '</b></h3>';
-                    newContent += '<h5 class="zxc" >Project Lead: ' + data[i].project_lead + '</h5>';
-                    newContent += '<p class="card__text zxc" style=" margin-right: 1.7rem; margin-left: 1.7rem; ">' + data[i].project_description + '</p>';
-                    if (data[i].project_github != null) {
-                      newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
-                    }
-                    if (data[i].project_website != null) {
-                      newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
-                    }
-                    <!-- newContent += '</div>'; -->
-                    newContent += '</div>';
-                    newContent += '</div>';
-                  } else {
-                    newContent = 'NONE';
                   }
-                }
-                // Update the page with the new content
-                document.getElementById('carousel-slider').innerHTML = newContent;
-              },
-              error: function(jqXHR, status, err) {
-                newContent = 'ERROR: NONE';
-                document.getElementById('carousel-slider').innerHTML = newContent;
-                alert("Status: " + textStatus);
-                alert("Error: " + errorThrown);
-              }
-            })
-          </script>
-          <!---------------->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- END OF BLISSLABS -->
-  <div class="text-white bg-dark" id="where">
-    <div class="container">
-      <div class="row">
-        <div class="p-5 col-md-6">
-          <h3><b>boringdroid</b></h3>
-          <p class="">https://github.com/boringdroid/boringdroid</p>
-          <a href="https://github.com/boringdroid/boringdroid" target="_blank"><i class="fa d-inline fa-lg mr-3 text-white fa-github"></i></a>
-        </div>
-        <div class="p-5 col-md-6">
-          <div class="col-md-12 mt-3" style="">
-            <p class="text-center text-muted" contenteditable="true">© Copyright 2021-2023 BlissLabs - All rights reserved. </p>
+                  // Update the page with the new content
+                  document.getElementById("carousel-slider").innerHTML =
+                    newContent;
+                },
+                error: function (jqXHR, status, err) {
+                  newContent = "ERROR: NONE";
+                  document.getElementById("carousel-slider").innerHTML =
+                    newContent;
+                  alert("Status: " + textStatus);
+                  alert("Error: " + errorThrown);
+                },
+              });
+            </script>
+            <!---------------->
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
-  <!-- Script: Smooth scrolling between anchors in the same page -->
-  <script src="js/smooth-scroll.js"></script>
-</body>
-
+    <!-- END OF BLISSLABS -->
+    <div class="text-white bg-dark" id="where">
+      <div class="container">
+        <div class="row">
+          <div class="p-5 col-md-6">
+            <h3><b>boringdroid</b></h3>
+            <p class="">https://github.com/boringdroid/boringdroid</p>
+            <a href="https://github.com/boringdroid/boringdroid" target="_blank"
+              ><i class="fa d-inline fa-lg mr-3 text-white fa-github"></i
+            ></a>
+          </div>
+          <div class="p-5 col-md-6">
+            <div class="col-md-12 mt-3" style="">
+              <p class="text-center text-muted" contenteditable="true">
+                © Copyright 2021-2023 BlissLabs - All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      crossorigin="anonymous"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    ></script>
+    <!-- Script: Smooth scrolling between anchors in the same page -->
+    <script src="js/smooth-scroll.js"></script>
+  </body>
 </html>
