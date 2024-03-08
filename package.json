@@ -1,0 +1,23 @@
+{
+  "name": "boringdroid.github.io",
+  "version": "1.0.0",
+  "description": "The boringdorid project's site.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boringdroid/boringdroid.github.io.git"
+  },
+  "author": "",
+  "license": "Apache License, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/boringdroid/boringdroid.github.io/issues"
+  },
+  "homepage": "https://github.com/boringdroid/boringdroid.github.io",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
