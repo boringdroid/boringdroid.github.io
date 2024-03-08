@@ -4,7 +4,11 @@
   "description": "The boringdorid project's site.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "pretitter": "npx prettier . --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run lint:fix && npm run prettier:fix"
   },
   "repository": {
     "type": "git",

@@ -9,5 +9,5 @@ We can run following commands to fix these issues automatically:
 
 ```shell
 npm install
-npx eslint . --fix
+npm run format
 ```
