@@ -244,73 +244,198 @@
             </div>
             <!---------------->
             <script>
-              $.ajax({
-                type: "GET",
-                url: "https://api.blissroms.org/api/allprojects",
-                contentType: "application/json",
-                datatype: "json",
-                data: {},
-                success: function (data) {
-                  var newContent = ""; // Variable to hold HTML
-                  for (var i = 0; i < data.length; i++) {
-                    // Loop through object
-                    if (data[i].project != null) {
-                      if (i == 0) {
-                        newContent += '<div class="carousel-item active">';
-                      } else {
-                        newContent += '<div class="carousel-item">';
-                      }
-                      newContent +=
-                        '<img class="d-block img-fluid" src="' +
-                        data[i].project_avatar +
-                        '" style="max-width: auto; height: 350px;"';
-                      newContent +=
-                        'alt="' +
-                        data[i].project +
-                        ' " style="padding-top: 1.5rem;"/>';
-                      newContent +=
-                        '<div class="carousel-caption" style="background: linear-gradient(#343a40 10%, #343a40 100%)!important; padding-top: 120px; margin-left: 350px; ">';
-                      <!-- newContent += '<div class="item-details">'; -->
-                      newContent +=
-                        '<h3 class="zxc" ><b style="font-size: xx-large;">' +
-                        data[i].project +
-                        "</b></h3>";
-                      newContent +=
-                        '<h5 class="zxc" >Project Lead: ' +
-                        data[i].project_lead +
-                        "</h5>";
-                      newContent +=
-                        '<p class="card__text zxc" style=" margin-right: 1.7rem; margin-left: 1.7rem; ">' +
-                        data[i].project_description +
-                        "</p>";
-                      if (data[i].project_github != null) {
-                        newContent +=
-                          '<a href="' +
-                          data[i].project_github +
-                          '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
-                      }
-                      if (data[i].project_website != null) {
-                        newContent +=
-                          '<a href="' +
-                          data[i].project_website +
-                          '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
-                      }
-                      newContent += "</div>";
-                      newContent += "</div>";
-                    } else {
-                      newContent = "NONE";
-                    }
+              const data = [
+                {
+                  project: "Android-Generic",
+                  project_description:
+                    "Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use development toolkit. Go get your ROM on :)",
+                  project_lead: "Jon West",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/2/61ca77196da33_android-generic.png",
+                  project_website: "https://android-generic.github.io",
+                  project_github:
+                    "https://gitlab.com/android-generic/vendor_android-generic",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "BlissOS",
+                  project_description:
+                    "Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.",
+                  project_lead: "HMTheBoy154",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/4/61ca783b236fb_blissos.png",
+                  project_website: "https://blissos.org",
+                  project_github: "https://github.com/BlissRoms-x86",
+                  twitter: "https://twitter.com/blissos_org",
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "boringdroid",
+                  project_description:
+                    "boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.",
+                  project_lead: "utzcoz",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/5/61ca7893cf9b5_boringdroid.png",
+                  project_website: "https://boringdroid.github.io/",
+                  project_github: "https://github.com/boringdroid",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "Supreme Gamers",
+                  project_description:
+                    "Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects",
+                  project_lead: "AXON",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/6/61ca78df1b27d_SG_Asset_2.png",
+                  project_website: "https://supreme-gamers.com/",
+                  project_github: "https://github.com/AXIM0S/gearlock",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "Waydroid",
+                  project_description:
+                    "Waydroid uses a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu.",
+                  project_lead: "Erfan Abdi",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/7/61ca792708e70_waydroid.png",
+                  project_website: "https://waydro.id/",
+                  project_github: "https://github.com/waydroid",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "BlissRoms",
+                  project_description:
+                    "A fully featured replacement OS for your Android device based off AOSP, bringing many customizations, features, and optimizations to your device.",
+                  project_lead: "Jackeagle",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/22/61d7219cb5906_Frame-101.png",
+                  project_website: "https://blissroms.org",
+                  project_github: "https://github.com/BlissRoms",
+                  twitter: "https://twitter.com/Bliss_ROMs",
+                  instagram: "https://www.instagram.com/blissroms/?hl=en",
+                  facebook: null,
+                  donation: null,
+                  primary_download: "https://downloads.blissroms.org",
+                  secondary_download:
+                    "https://sourceforge.net/projects/blissroms/files/",
+                  third_download: null,
+                },
+                {
+                  project: "XtMapper",
+                  project_description:
+                    "XtMapper, a free and open source keymapper.",
+                  project_lead: "Xtr126",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/32/655ced9f6ec02_XtMapper.png",
+                  project_website: "https://xtr126.github.io/XtMapper-docs/",
+                  project_github: "https://github.com/Xtr126/XtMapper",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+                {
+                  project: "Smart Dock",
+                  project_description:
+                    "A user-friendly desktop mode launcher that offers a modern and customizable user interface",
+                  project_lead: "axel358",
+                  project_avatar:
+                    "https://internal.blisslabs.org/storage/33/655cedde3fca3_ic_launcher.png",
+                  project_website: "https://github.com/axel358/smartdock",
+                  project_github: "https://github.com/axel358/smartdock",
+                  twitter: null,
+                  instagram: null,
+                  facebook: null,
+                  donation: null,
+                  primary_download: null,
+                  secondary_download: null,
+                  third_download: null,
+                },
+              ];
+              var newContent = ""; // Variable to hold HTML
+              for (var i = 0; i < data.length; i++) {
+                // Loop through object
+                if (data[i].project != null) {
+                  if (i == 0) {
+                    newContent += '<div class="carousel-item active">';
+                  } else {
+                    newContent += '<div class="carousel-item">';
                   }
-                  // Update the page with the new content
-                  document.getElementById("carousel-slider").innerHTML =
-                    newContent;
-                },
-                error: function (jqXHR, status, err) {
-                  newContent = "ERROR: NONE";
-                  document.getElementById("carousel-slider").innerHTML =
-                    newContent;
-                },
-              });
+                  newContent +=
+                    '<img class="d-block img-fluid" src="' +
+                    data[i].project_avatar +
+                    '" style="max-width: auto; height: 350px;"';
+                  newContent +=
+                    'alt="' +
+                    data[i].project +
+                    ' " style="padding-top: 1.5rem;"/>';
+                  newContent +=
+                    '<div class="carousel-caption" style="background: linear-gradient(#343a40 10%, #343a40 100%)!important; padding-top: 120px; margin-left: 350px; ">';
+                  <!-- newContent += '<div class="item-details">'; -->
+                  newContent +=
+                    '<h3 class="zxc" ><b style="font-size: xx-large;">' +
+                    data[i].project +
+                    "</b></h3>";
+                  newContent +=
+                    '<h5 class="zxc" >Project Lead: ' +
+                    data[i].project_lead +
+                    "</h5>";
+                  newContent +=
+                    '<p class="card__text zxc" style=" margin-right: 1.7rem; margin-left: 1.7rem; ">' +
+                    data[i].project_description +
+                    "</p>";
+                  if (data[i].project_github != null) {
+                    newContent +=
+                      '<a href="' +
+                      data[i].project_github +
+                      '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
+                  }
+                  if (data[i].project_website != null) {
+                    newContent +=
+                      '<a href="' +
+                      data[i].project_website +
+                      '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+                  }
+                  newContent += "</div>";
+                  newContent += "</div>";
+                } else {
+                  newContent = "NONE";
+                }
+              }
+              // Update the page with the new content
+              document.getElementById("carousel-slider").innerHTML = newContent;
             </script>
             <!---------------->
           </div>
